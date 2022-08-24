@@ -33,3 +33,11 @@ class ProductPage(BasePage):
         assert price.text == price_in_basket.text, "Price incorrect in the basket"
         print(f"Price {price_in_basket.text} is correct")
 
+    #метод, который проверяет, что элемент не появляется на странице в течение заданного времени
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    #метод, который проверяет, что сообщение исчезает
+    def success_message_dissappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is not disappeared, but should be"
+
