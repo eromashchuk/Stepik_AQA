@@ -17,6 +17,11 @@ class BasePage():
     def should_be_go_to_basket_button(self):
         assert self.is_element_present(*BasePageLocators.BASKET_BUTTON), "Submit button is not presented" 
 
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
+
+
     def go_direct_to_basket_page(self):
         busket_page = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
         busket_page.click()
