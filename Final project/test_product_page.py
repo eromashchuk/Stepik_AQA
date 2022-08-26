@@ -22,13 +22,13 @@ class TestUserAddToBasketFromProductPage():
         page.should_be_authorized_user()
         print("User is authorized!!!")
 
-    @pytest.mark.need_review
-    def test_guest_cant_see_success_message(self, browser):
+    def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         page = ProductPage(browser, link)
         page.open()
         page.should_not_be_success_message()
 
+    @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
         #link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
