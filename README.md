@@ -1,2 +1,2 @@
 # Stepik_AQA
-Финальный проект курса "Автоматизация тестирования с помощью Selenium и Python" на Stepik (https://stepik.org/course/575)
+Final project for a Stepik`s course of "Automation QA with Selenium and Python" (https://stepik.org/course/575)
